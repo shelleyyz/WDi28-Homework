@@ -13,6 +13,7 @@ const fetchBook = function() {
       //this checks the request's state 4 = done aka full server response was received and it's OK for you to continue processing it.
     }
 
+    //all ajax processing must occur in here
     const info = JSON.parse(req.responseText);
     //otherwise
     //responseText to access the data sent from the server, transform JSON into JS object
@@ -37,4 +38,3 @@ const fetchBook = function() {
 };
 
 document.getElementById('fetch').addEventListener('click', fetchBook);
-fetchBook();
